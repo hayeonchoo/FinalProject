@@ -7,13 +7,22 @@
     cursor: pointer;
 }
 
-.wrapper .header .dropdown, .title {
+.wrapper .header .navigation .dropdown {
     position: fixed;
     width: 100%;
     margin: 0;
     top: 0;
     left: 0;
     box-sizing: border-box;
+    justify-content: flex-start;
+}
+
+.wrapper .header .navigation .title {
+    justify-content: flex-start;
+}
+
+.wrapper .header .navigation .searchcontainer {
+    justify-content: center;
 }
 
 .dropdown {
