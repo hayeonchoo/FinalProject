@@ -8,36 +8,30 @@
 }
 
 .wrapper .header .navigation .dropdown {
-    display: flex;
     position: fixed;
     width: 100%;
     margin: 0;
     top: 0;
     left: 0;
     box-sizing: border-box;
-    justify-content: flex-start;
 }
 
 .wrapper .header .navigation .title {
-    display: flex;
     position: fixed;
     width: 100%;
     margin: 0;
     top: 0;
-    left: 20px;
+    left: 50px;
     box-sizing: border-box;
-    justify-content: flex-start;
 }
 
 .wrapper .header .navigation .searchcontainer {
-    display: flex;
     position: fixed;
     width: 100%;
     margin: 0;
     top: 0;
-    left: 50%;
+    left: 40%;
     box-sizing: border-box;
-    justify-content: center;
 }
 
 .dropdown {
