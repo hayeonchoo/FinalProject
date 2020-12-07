@@ -20,8 +20,8 @@
     position: fixed;
     width: 100%;
     margin: 0;
-    top: 0;
-    left: 50px;
+    top: -15px;
+    left: 65px;
     box-sizing: border-box;
 }
 
@@ -29,8 +29,8 @@
     position: fixed;
     width: 100%;
     margin: 0;
-    top: 0;
-    left: 40%;
+    top: 15px;
+    left: 45%;
     box-sizing: border-box;
 }
 
