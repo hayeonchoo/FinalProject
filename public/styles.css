@@ -8,6 +8,7 @@
 }
 
 .wrapper .header .navigation .dropdown {
+    display: flex;
     position: fixed;
     width: 100%;
     margin: 0;
@@ -18,6 +19,7 @@
 }
 
 .wrapper .header .navigation .title {
+    display: flex;
     position: fixed;
     width: 100%;
     margin: 0;
@@ -28,6 +30,7 @@
 }
 
 .wrapper .header .navigation .searchcontainer {
+    display: flex;
     position: fixed;
     width: 100%;
     margin: 0;
