@@ -18,10 +18,22 @@
 }
 
 .wrapper .header .navigation .title {
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
     justify-content: flex-start;
 }
 
 .wrapper .header .navigation .searchcontainer {
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
     justify-content: center;
 }
 
