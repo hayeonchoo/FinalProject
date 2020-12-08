@@ -24,7 +24,8 @@ html {
     background: rgb(255, 239, 97);
     font-family: 'Muli', sans-serif;
     color: black;
-    border: 5px solid green;
+    border: 1px solid green;
+    box-sizing: border-box;
   }
   
   .parent .child-1 {
