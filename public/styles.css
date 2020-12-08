@@ -48,7 +48,7 @@ html {
   .parent .child-1 .dropdown {
       position: fixed;
       width: 100%;
-      marigin: 0;
+      margin: 0;
       top: 0;
       left: 0;
       box-sizing: border-box;
@@ -57,8 +57,8 @@ html {
   .parent .child-1 .title {
       position: fixed;
       height: 16%;
-      width: 18%;
-      marigin: 0;
+      width: 25%;
+      margin: 0;
       top: -15px;
       left: 65px;
       box-sizing: border-box;
@@ -66,9 +66,9 @@ html {
   
   .parent .child-1 .searchcontainer {
       position: fixed;
-      width: 15%;
+      width: 25%;
       top: 15px;
-      marigin: 0;
+      margin: 0;
       left: 45%;
       box-sizing: border-box;
   }
