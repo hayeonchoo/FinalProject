@@ -13,12 +13,15 @@ request.onload = function() {
     const h1 = document.createElement('h1')
     h1.textContent = recipe.title
     
+    const img = document.createElement('img')
+    img.setAttribute('src', recipe.image)
+
     document.getElementById('container').appendChild(card)
     
     card.appendChild(h1)
+    card.appendChild(img)
     
     console.log(recipe.title)
-    console.log(recipe.img)
   })
 }
 
