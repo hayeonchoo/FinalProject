@@ -76,7 +76,7 @@ html {
   .parent .child-1 .filter {
     position: fixed;
     width: 10%;
-    top: 25px;
+    top: 10px;
     margin: 0;
     left: 60%;
     box-sizing: border box;
