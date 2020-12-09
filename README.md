@@ -1,5 +1,5 @@
 ** PROJECT TITLE **
-Food For Society
+Recipes For Society
 
 ** PROJECT DESCRIPTION **
 A web application that allows the user to search through a database of recipes and filter them using a variety of parameters.
