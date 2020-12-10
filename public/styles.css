@@ -7,6 +7,11 @@ body{
   max-width: 960px;
   background-color: whitesmoke;
   margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 input {
