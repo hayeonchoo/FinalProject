@@ -17,8 +17,41 @@ input {
 .child-1 {
   display:inline-block;
 }
-.bg-img {
-  background-image: url(images/headerimgedited.jpg);
+.bg-img-index {
+  background-image: url(images/originaledit.jpg);
+  min-height:380px;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  position:relative;
+  width: 960px;
+  height: 400px;
+}
+
+.bg-img-about {
+  background-image: url(images/aboutusheader.jpg);
+  min-height:380px;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  position:relative;
+  width: 960px;
+  height: 400px;
+}
+
+.bg-img-docu {
+  background-image: url(images/docuheader.jpg);
+  min-height:380px;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  position:relative;
+  width: 960px;
+  height: 400px;
+}
+
+.bg-img-favorites {
+  background-image: url(images/favoritesheader.jpg);
   min-height:380px;
   background-position:center;
   background-repeat:no-repeat;
