@@ -3,13 +3,6 @@ body{
   height: 100%;
 }
 
-.header-image{
-  width: 960px;
-  height: 400px;
-  background-image: url(images/headerimgedited.jpg)
-  
-}
-
 .container {
   max-width: 960px;
   background-color: #bcb8b1;
