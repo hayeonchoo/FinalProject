@@ -1,5 +1,5 @@
 body{
-  background-color: steelblue;
+  background-color: #99AEAD;
   height: 100%;
 }
 
@@ -66,7 +66,7 @@ input {
   letter-spacing: 2px;
   word-spacing: 5px;
   overflow:hidden;
-  background-color: lightsteelblue;
+  background-color: #6d9197;
 }
 .topnav a{
   float:left;
