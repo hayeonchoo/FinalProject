@@ -16,6 +16,7 @@ input {
 
 .child-1 {
   display:inline-block;
+  text-align:center;
 }
 .bg-img-index {
   background-image: url(images/indexheader.jpg);
