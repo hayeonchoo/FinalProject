@@ -61,6 +61,7 @@ input {
   height: 400px;
 }
 .topnav{
+  justify-content:space-evenly;
   overflow:hidden;
   background-color: lightsteelblue;
 }
