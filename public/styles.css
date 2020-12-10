@@ -108,3 +108,7 @@ input {
   font-weight: bold;
   text-transform: capitalize;
 }
+
+.bottom{
+  text-align: center;
+}
