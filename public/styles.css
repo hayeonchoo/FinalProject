@@ -5,7 +5,7 @@ body{
 
 .container {
   max-width: 960px;
-  background-color: #bcb8b1;
+  background-color: lightsteelblue;
   margin: auto;
 }
 
@@ -29,7 +29,7 @@ input {
 }
 .topnav{
   overflow:hidden;
-  background-color: black;
+  background-color: lightsteelblue;
 }
 .topnav a{
   float:left;
