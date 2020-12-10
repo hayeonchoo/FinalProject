@@ -118,9 +118,9 @@ input {
   border: 1px solid black;
   padding: 10px;
   display:inline-block;
-  text-align:center;
+  text-align:right;
   display: flex;
-  flex-direction: columns;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
