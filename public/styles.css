@@ -19,6 +19,9 @@ input {
   height:30px;
 
 }
+.filter {
+  height:30px;
+}
 
 .child-1 {
   display:inline-block;
