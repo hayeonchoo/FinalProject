@@ -1,124 +1,115 @@
-html {
-    background: rgb(247, 145, 167);
-    padding: 15px;
-    border: 5px solid white;
-    margin: 15px;
-    height: 2000px;
-  }
-  
-  body {
-    background: blue;
-    padding: 20px;
-    border: 5px solid black;
-    margin: 0;
-  }
-  
-  .parent {
-    background: white;
-    padding: 10px;
-    border: 5px solid black;
-    margin: 0;
-  }
-  
-  .parent div {
-    background: rgb(255, 239, 97);
-    font-family: 'Muli', sans-serif;
-    color: black;
-    border: 1px solid green;
-    box-sizing: border-box;
-  }
-  
-  .parent .child-1 {
-    position: fixed;
-    width: 100%;
-    margin: 0;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-  }
-  
-  .menu {
-      background-color: #4CAF50;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-  }
-  
-  .parent .child-1 .dropdown {
-      position: fixed;
-      width: 100%;
-      margin: 0;
-      top: 0;
-      left: 0;
-      box-sizing: border-box;
-  }
-  
-  .parent .child-1 .title {
-      position: fixed;
-      height: 16%;
-      width: 25%;
-      margin: 0;
-      top: -15px;
-      left: 65px;
-  }
-  
-  .parent .child-1 .searchcontainer {
-      position: fixed;
-      width: 25%;
-      top: 15px;
-      margin: 0;
-      left: 40%;
-      box-sizing: border-box;
-  }
-  
-  .parent .child-1 .filter {
-    position: fixed;
-    width: 10%;
-    top: 10px;
-    margin: 0;
-    left: 60%;
-    box-sizing: border box;
-  }
-  
-  .dropdown {
-      position: relative;
-      display: inline-block;
-  }
-  
-  .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-  }
-  
-  .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  .dropdown:hover .dropdown-content {
-      display: block;
-    }
-  
-  .dropdown:hover .menu {
-      background-color: #3e8e41;
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    margin: 1rem;
-    border: 1px solid gray;
-  }
+body{
+  background-color: #99AEAD;
+  height: 100%;
+}
+
+.container {
+  max-width: 960px;
+  background-color: whitesmoke;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 300px;
+  height:30px;
+
+}
+.filter {
+  height:30px;
+}
+
+.child-1 {
+  display:inline-block;
+  text-align:center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.bg-img-index {
+  background-image: url(images/indexheader.jpg);
+  min-height:380px;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  position:relative;
+  width: 960px;
+  height: 400px;
+}
+
+.bg-img-about {
+  background-image: url(images/aboutusheader.jpg);
+  min-height:380px;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  position:relative;
+  width: 960px;
+  height: 400px;
+}
+
+.bg-img-docu {
+  background-image: url(images/docuheader.jpg);
+  min-height:380px;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  position:relative;
+  width: 960px;
+  height: 400px;
+}
+
+.bg-img-favorites {
+  background-image: url(images/favoritesheader.jpg);
+  min-height:380px;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  position:relative;
+  width: 960px;
+  height: 400px;
+}
+.topnav{
+  display:flex;
+  justify-content:space-between;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  overflow:hidden;
+  background-color: #6d9197;
+  width:100%;
+}
+.topnav a{
+  display: inline-block;
+  /*justify-content: space-between;*/
+  /*align-items: center;*/
+  /*float:left;*/
+  color: aliceblue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration:none;
+  font-size: 17px;
+}
+.topnav a:hover{
+  background-color: azure;
+  color:lightsteelblue;
+}
+
+.p{
+  font-weight: bold;
+}
+
+.h1{
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.bottom{
+  text-align: center;
+  line-height: 1.6;
+}
