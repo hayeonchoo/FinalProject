@@ -80,13 +80,8 @@ input {
 }
 .topnav a{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  margin-bottom: 5px;
-  border-radius: 4px;
   
   float:left;
   color: aliceblue;
@@ -100,14 +95,11 @@ input {
   color:lightsteelblue;
 }
 
-.bottom{
-
+.p{
+  font-weight: bold;
 }
 
-.wrapper{
-
-}
-
-.header{
-
+.h1{
+  font-weight: bold;
+  text-transform: capitalize;
 }
