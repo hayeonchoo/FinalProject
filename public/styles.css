@@ -24,6 +24,8 @@ input {
   background-repeat:no-repeat;
   background-size:cover;
   position:relative;
+  width: 960px;
+  height: 400px;
 }
 .containhead {
   position:absolute;
