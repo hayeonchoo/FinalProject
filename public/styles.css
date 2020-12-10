@@ -1,11 +1,11 @@
 body{
-  background-color: #8e9aaf;
+  background-color: #efd3d7;
   height: 100%;
 }
 
 .container {
   max-width: 960px;
-  background-color: #efd3d7;
+  background-color: whitesmoke;
   margin: auto;
 }
 
