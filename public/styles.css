@@ -27,11 +27,6 @@ input {
   width: 960px;
   height: 400px;
 }
-.containhead {
-  position:absolute;
-  margin:20px;
-  width:auto;
-}
 .topnav{
   overflow:hidden;
   background-color: black;
@@ -47,4 +42,12 @@ input {
 .topnave a:hover{
   background-color: azure;
   color:black;
+}
+
+.wrapper{
+
+}
+
+.header{
+
 }
