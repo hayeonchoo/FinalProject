@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title> Recipes for Society </title>
     <link rel='stylesheet' href='styles.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <!--Start of Website Content-->
 <body>
@@ -20,16 +21,14 @@
       <div class = "bg-img-index"></div>
 
           <div class="searchcontainer">
-            <form class="search-form">
-              <b></b>
-              <input type="text" class="search" placeholder="Begin discovering thousands of new recipes">
-            </form>
+            <input id="search-box">
+            <button id="search-submit" onclick="getRecipe(document.getElementById('search-box').value)">Search</button>
           </div>
 
           <button class ="filter">Add Filters</button>
         </div>
       
-      <div class="child-2"></div>
+      <div id="output">Results:</div>
       <div class="child-3"></div>
       <div class="container" id="container"></div>
       
