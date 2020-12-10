@@ -5,7 +5,7 @@ body{
 
 .container {
   max-width: 960px;
-  background-color: white;
+  background-color: #efd3d7;
   margin: auto;
 }
 
@@ -75,6 +75,10 @@ input {
 .topnav a:hover{
   background-color: azure;
   color:lightsteelblue;
+}
+
+.bottom{
+
 }
 
 .wrapper{
