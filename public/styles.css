@@ -84,7 +84,7 @@ input {
 }
 .topnav a{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   
   float:left;
