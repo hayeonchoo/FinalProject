@@ -76,6 +76,7 @@ input {
   height: 400px;
 }
 .topnav{
+  display:flex;
   justify-content:space-between;
   letter-spacing: 2px;
   word-spacing: 5px;
@@ -83,11 +84,10 @@ input {
   background-color: #6d9197;
 }
 .topnav a{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-  float:left;
+  display: inline-block;
+  /*justify-content: space-between;*/
+  /*align-items: center;*/
+  /*float:left;*/
   color: aliceblue;
   text-align: center;
   padding: 14px 16px;
