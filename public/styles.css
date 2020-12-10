@@ -39,7 +39,7 @@ input {
   text-decoration:none;
   font-size: 17px;
 }
-.topnave a:hover{
+.topnav a:hover{
   background-color: azure;
   color:lightsteelblue;
 }
