@@ -67,7 +67,7 @@ function getRecipe(q) {
           res.results[i].image +
           "'width='400' /><br>Cook Time: Ready In " +
           res.results[i].readyInMinutes +
-          " Minutes";
+          " Minutes<br>";
         getInfo(res.results[i].id, item);
         getInstructions(res.results[i].id, item);
         document.getElementById("output").appendChild(item);
