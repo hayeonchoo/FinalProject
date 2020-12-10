@@ -63,6 +63,7 @@ input {
 .topnav{
   justify-content:space-evenly;
   letter-spacing: 2px;
+  word-spacing: 5px;
   overflow:hidden;
   background-color: lightsteelblue;
 }
