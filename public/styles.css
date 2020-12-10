@@ -68,6 +68,15 @@ input {
   background-color: lightsteelblue;
 }
 .topnav a{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  
   float:left;
   color: aliceblue;
   text-align: center;
