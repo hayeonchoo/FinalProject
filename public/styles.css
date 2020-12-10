@@ -120,7 +120,7 @@ input {
   display:inline-block;
   text-align:center;
   display: flex;
-  flex-direction: row;
+  flex-direction: columns;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
