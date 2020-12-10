@@ -82,7 +82,7 @@ input {
   word-spacing: 5px;
   overflow:hidden;
   background-color: #6d9197;
-  width:20%;
+  width:100%;
 }
 .topnav a{
   display: inline-block;
