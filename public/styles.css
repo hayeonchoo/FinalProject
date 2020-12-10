@@ -4,10 +4,10 @@ body{
 }
 
 .header-image{
-  width: 100%;
+  width: 960px;
   height: 400px;
-  background-image: url(images/headerimage.jpg)
-  background-size: cover;
+  background-image: url(images/headerimgedited.jpg)
+  
 }
 
 .container {
