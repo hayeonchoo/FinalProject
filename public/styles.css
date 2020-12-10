@@ -16,7 +16,11 @@ body{
 
 input {
   width: 300px;
+  height:30px;
 
+}
+.filter {
+  height:30px;
 }
 
 .child-1 {
