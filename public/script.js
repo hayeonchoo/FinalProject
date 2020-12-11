@@ -30,19 +30,16 @@ function getInfo(id, obj) {
 }
 
 function getInstructions(id, obj) {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("output").innerHTML += this.responseText;
+  $.ajax({
+    url:
+      "https://api.spoonacular.com/recipes/" +
+      id +
+      "/analyzedInstructions?apiKey=f7c1bb91a6834ff68b06205d141ba628",
+    type: "GET",
+    success: function (res) {
+      console.log(res);
     }
-  };
-  xhttp.open(
-    "POST",
-    "https://api.spoonacular.com/recipes/analyzeInstructions",
-    true
-  );
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send();
+  });
 }
 
 function removePrevSearch(parent) {
