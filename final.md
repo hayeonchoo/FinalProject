@@ -12,6 +12,6 @@ The Solution: We want to solve this problem by providing our stakeholders with a
 
 Technical System: For our project, we hope to cover both iOS and Desktop. All members of our group members have iOS devices; therefore, it would be easier to target iOS devices.
 
-Challenges Faced: 
+Challenges Faced: We had trouble figuring out how to implement the PUT and POST endpoints in particular.
 
-Possible Future Work: 
+Possible Future Work: Create more customizable filters and add the option to create an account.
