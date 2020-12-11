@@ -107,7 +107,7 @@ function getInfo(id) {
     url:
       "https://api.spoonacular.com/recipes/" +
       id +
-      "/information?apiKey=f7c1bb91a6834ff68b06205d141ba628",
+      "/information?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
     method: "GET",
     success: function (res) {
       var temp_list = [];
@@ -124,15 +124,14 @@ function formRecipe(form) {
   $.ajax({
     method: "POST",
     url:
-      "https://api.spoonacular.com/recipes/visualizeRecipe?apiKey=f7c1bb91a6834ff68b06205d141ba628",
-    async: true,
-    crossDomain: true,
-    headers: {
-      "content-type": "multipart/form-data"
-    },
-    contentType: false,
-    mimeType: "multipart/form-data",
-    data: form,
+      "https://api.spoonacular.com/recipes/visualizeRecipe?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
+      async: true,
+      crossDomain: true,
+      contentType: false,
+      processData: false,
+      cache: false,
+      mimeType: "multipart/form-data",
+      data: form,
     success: function (res) {
       console.log("before");
       console.log(res[0]);
@@ -147,7 +146,7 @@ function getInstructions(id, obj) {
     url:
       "https://api.spoonacular.com/recipes/" +
       id +
-      "/analyzedInstructions?apiKey=f7c1bb91a6834ff68b06205d141ba628",
+      "/analyzedInstructions?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
     method: "GET",
     success: function (res) {
       var list = [];
@@ -172,7 +171,7 @@ function removePrevSearch(parent) {
 function getRecipe(q) {
   $.ajax({
     url:
-      "https://api.spoonacular.com/recipes/search?apiKey=f7c1bb91a6834ff68b06205d141ba628&number=1&query=" +
+      "https://api.spoonacular.com/recipes/search?apiKey=0b5ee02fec15409fa6f231e40cda2fe6&number=1&query=" +
       q,
     method: "GET",
     success: function (res) {
