@@ -1,4 +1,4 @@
-const apiKey = c3aec59948c940bbbae565e216ae6713;
+var apiKey = c3aec59948c940bbbae565e216ae6713;
 
 function getInfo(id, obj) {
   $.ajax({
