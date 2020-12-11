@@ -1,10 +1,9 @@
-/*
 function getInfo(id, obj) {
   $.ajax({
     url:
       "https://api.spoonacular.com/recipes/" +
       id +
-      "/information?apiKey=f7c1bb91a6834ff68b06205d141ba628",
+      "/information?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
     method: "GET",
     success: function (res) {
       var temp_list = [];
@@ -35,13 +34,13 @@ function getInfo(id, obj) {
 function postIngredients(list) {
   $.ajax({
     method: "POST",
-    url: "https://api.spoonacular.com/recipes/visualizeIngredients?apiKey=f7c1bb91a6834ff68b06205d141ba628",
+    url: "https://api.spoonacular.com/recipes/visualizeIngredients?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
     async: true,
     crossDomain: true,
     headers: {
       "content-type": "application/x-www-form-urlencoded"
     },
-    data: {list},
+    data: list,
     success: function (res) {
       console.log(res);
     }
@@ -54,7 +53,7 @@ function getInstructions(id, obj) {
     url:
       "https://api.spoonacular.com/recipes/" +
       id +
-      "/analyzedInstructions?apiKey=f7c1bb91a6834ff68b06205d141ba628",
+      "/analyzedInstructions?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
     method: "GET",
     success: function (res) {
       var list = [];
@@ -78,7 +77,7 @@ function removePrevSearch(parent) {
 function getRecipe(q) {
   $.ajax({
     url:
-      "https://api.spoonacular.com/recipes/search?apiKey=f7c1bb91a6834ff68b06205d141ba628&number=1&query=" +
+      "https://api.spoonacular.com/recipes/search?apiKey=0b5ee02fec15409fa6f231e40cda2fe6&number=1&query=" +
       q,
     method: "GET",
     success: function (res) {
@@ -101,7 +100,8 @@ function getRecipe(q) {
       }
     }
   });
-}*/
+}
+/*
 function getInfo(id) {
   $.ajax({
     url:
@@ -196,3 +196,4 @@ function getRecipe(q) {
     }
   });
 }
+*/
