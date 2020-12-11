@@ -10,6 +10,7 @@ function getInfo(id, obj) {
       title.appendChild(document.createTextNode("Ingredients:"));
       obj.appendChild(title);
       var list = document.createElement("ul");
+      list.innerHTML += "Ingredients";
       list.setAttribute("class","ulist");
       for (i in res.extendedIngredients) {
         var item = document.createElement("li");
@@ -26,21 +27,6 @@ function getInfo(id, obj) {
       obj.appendChild(sourceLink);
     }
   });
-}
-
-function postInstructions(list) {
-  fetch('/api', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(form)
-  })
-    .then((fromServer) => fromServer.json())
-    .then((jsonFromServer) => console.log(jsonFromServer))
-    .catch((err) => {
-      console.log(err);
-    });
 }
 
 function getInstructions(id, obj) {

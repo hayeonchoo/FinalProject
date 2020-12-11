@@ -26,7 +26,8 @@ app.route('/api')
   })
   .post(async(req, res) => {
     console.log('POST request detected');
-    const data = await fetch('https://api.spoonacular.com/recipes/analyzeInstructions');
+    const data = await fetch('https://api.spoonacular.com/recipes/visualizeIngredients');
+    console.log(data);
     const json = await data.json();
     res.json(json);
   });
