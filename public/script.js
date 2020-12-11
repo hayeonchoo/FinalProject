@@ -9,13 +9,15 @@ function getInfo(id, obj) {
       var title = document.createElement("h2");
       title.appendChild(document.createTextNode("Ingredients:"));
       obj.appendChild(title);
+      var list = document.createElement("ul");
+      list.setAttribute("class","ulist");
       for (i in res.extendedIngredients) {
         var item = document.createElement("li");
         var entry = res.extendedIngredients[i]["name"];
-        console.log(entry);
         item.appendChild(document.createTextNode(entry));
-        obj.appendChild(item);
+        list.appendChild(item);
       }
+      obj.appendChild(list);
       var sourceLink = document.createElement("a");
       var linkText = document.createTextNode("Link to Recipe");
       sourceLink.appendChild(linkText);
@@ -27,19 +29,23 @@ function getInfo(id, obj) {
 }
 
 function getInstructions(id, obj) {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("output").innerHTML += this.responseText;
+  $.ajax({
+    url:
+      "https://api.spoonacular.com/recipes/" +
+      id +
+      "/analyzedInstructions?apiKey=f7c1bb91a6834ff68b06205d141ba628",
+    type: "GET",
+    success: function (res) {
+      var list = [];
+      console.log(res[0]['steps']);
+      for (var i = 0; i < res[0]['steps'].length; i++){
+        var step = res[0]['steps'][i]['step'];
+        console.log(step);
+        list.push(step);
+      }
+      console.log(list);
     }
-  };
-  xhttp.open(
-    "POST",
-    "https://api.spoonacular.com/recipes/analyzeInstructions",
-    true
-  );
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send();
+  });
 }
 
 function removePrevSearch(parent) {
@@ -67,7 +73,7 @@ function getRecipe(q) {
           res.results[i].image +
           "'width='400' /><br>Cook Time: Ready In " +
           res.results[i].readyInMinutes +
-          " Minutes";
+          " Minutes<br>";
         getInfo(res.results[i].id, item);
         getInstructions(res.results[i].id, item);
         document.getElementById("output").appendChild(item);

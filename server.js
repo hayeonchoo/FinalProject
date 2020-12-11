@@ -1,8 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-
-
+import {open} from 'sqlite';
+import sqlite3 from 'sqlite3';
 
 dotenv.config();
 
@@ -26,7 +26,7 @@ app.route('/api')
   })
   .post(async(req, res) => {
     console.log('POST request detected');
-    const data = await fetch('https://spoonacular.com/food-api.json');
+    const data = await fetch('https://api.spoonacular.com/recipes/analyzeInstructions');
     const json = await data.json();
     res.json(json);
   });
@@ -34,3 +34,11 @@ app.route('/api')
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
 });
+
+
+// SQLite Settings
+
+const dbSettings = {
+	filename: './tmp/database.db',
+	driver: sqlite3.Database
+	};
