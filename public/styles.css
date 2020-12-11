@@ -145,6 +145,10 @@ ul.ulist {
 
 .card {
   width: auto;
+  border-top: #dee1dd;
+  border-bottom: #dee1dd;
+  border-left: none;
+  border-right: none;
   border-style: solid;
   border-color: #dee1dd;
   background-color: white;
