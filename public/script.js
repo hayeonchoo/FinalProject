@@ -122,18 +122,20 @@ function randRec() {
 
       var img = document.createElement("div");
       img.setAttribute("class", "img");
-      img.setAttribute("src",data.recipes[0].baseUri + data.recipes[0].image)
+      var pic = document.createElement("img");
+      pic.src = data.recipes[0].image;
+      img.appendChild(pic);
 
       var info = document.createElement("div");
       info.setAttribute("class","info");
 
       var h1 = document.createElement('h1')
-      h1.textContent = data.recipes[0].title
+      h1.textContent = data.recipes[0].title;
 
       
-      info.appendChild(h1)
-      item.appendChild(img)
-      item.appendChild(info)
+      info.appendChild(h1);
+      item.appendChild(img);
+      item.appendChild(info);
 
       getInfo(data.recipes[0].id, item);
       document.getElementById('output').appendChild(item);
