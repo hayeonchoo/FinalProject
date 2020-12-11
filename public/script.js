@@ -127,9 +127,11 @@ function formRecipe(form) {
       "https://api.spoonacular.com/recipes/visualizeRecipe?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
     contentType: false,
     processData: false,
-    contentType: 'multipart/form-data',
+    headers: {
+      "Content-Type": "multipart/form-data"
+    },
     mimeType: 'multipart/form-data',
-    data: form,
+    data: {form},
     success: function (res) {
       console.log("before");
       console.log(res[0]);
