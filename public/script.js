@@ -116,13 +116,13 @@ function randRec() {
 
   request.onload = function() {
     console.log(this.response)
-    const data = JSON.parse(this.response)
+    var data = JSON.parse(this.response)
       var item = document.createElement('div')
       item.setAttribute('class', 'card')
 
       var img = document.createElement("div");
       img.setAttribute("class", "img");
-      img.innerHTML += data.recipes[0].image;
+      img.setAttribute("src",data.baseUri + data.recipes[0].image)
 
       var info = document.createElement("div");
       info.setAttribute("class","info");
