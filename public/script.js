@@ -1,5 +1,3 @@
-const { blobToArrayBuffer } = require("cypress/types/blob-util");
-
 function getInfo(id, obj) {
   $.ajax({
     url:
