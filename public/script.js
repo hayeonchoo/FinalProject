@@ -30,7 +30,7 @@ function getInfo(id, obj) {
 
 function postInstructions(list) {
   $.ajax({
-    method: "POST";
+    method: "POST",
     url: "https://api.spoonacular.com/recipes/analyzeInstructions",
     async: true,
     crossDomain: true,
