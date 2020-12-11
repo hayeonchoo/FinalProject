@@ -112,6 +112,8 @@ input {
   padding: 14px 16px;
   text-decoration:none;
   font-size: 17px;
+  font-family: 'Montserrat', sans-serif
+  
 }
 .topnav a:hover{
   background-color: azure;
@@ -158,8 +160,8 @@ h2{font-family: 'Montserrat', sans-serif;
 
 }
 .bott{
-  border-style: groove ;
-  border-color: #2f575D;
+  border-style: solid ;
+  border-color: #dee1dd;
   background-color: white;
   width:100%;
   border-width: 5px;
