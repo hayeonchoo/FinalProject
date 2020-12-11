@@ -36,8 +36,14 @@ function getInstructions(id, obj) {
       "/analyzedInstructions?apiKey=f7c1bb91a6834ff68b06205d141ba628",
     type: "GET",
     success: function (res) {
+      var list = [];
       console.log(res[0]['steps']);
-
+      for (var i = 0; i < res[0]['steps'].length; i++){
+        var step = res[0]['steps'][i]['step'];
+        console.log(step);
+        list.push(step);
+      }
+      console.log(list);
     }
   });
 }
