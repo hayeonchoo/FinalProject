@@ -1,10 +1,12 @@
+const { blobToArrayBuffer } = require("cypress/types/blob-util");
+
 function getInfo(id, obj) {
   $.ajax({
     url:
       "https://api.spoonacular.com/recipes/" +
       id +
       "/information?apiKey=f7c1bb91a6834ff68b06205d141ba628",
-    type: "GET",
+    method: "GET",
     success: function (res) {
       var title = document.createElement("h2");
       title.appendChild(document.createTextNode("Ingredients:"));
@@ -14,7 +16,6 @@ function getInfo(id, obj) {
       for (i in res.extendedIngredients) {
         var item = document.createElement("li");
         var entry = res.extendedIngredients[i]["name"];
-        console.log(entry);
         item.appendChild(document.createTextNode(entry));
         list.appendChild(item);
       }
@@ -29,15 +30,40 @@ function getInfo(id, obj) {
   });
 }
 
+function postInstructions(list) {
+  $.ajax({
+    method: "POST";
+    url: "https://api.spoonacular.com/recipes/analyzeInstructions",
+    async: true,
+    crossDomain: true,
+    headers: {
+      "content-type": "application/x-www-form-urlencoded",
+      "apiKey": "f7c1bb91a6834ff68b06205d141ba628"
+    },
+    data: {"instructions": list},
+    success: function (res) {
+      console.log(res);
+    }
+  })
+}
+
 function getInstructions(id, obj) {
   $.ajax({
     url:
       "https://api.spoonacular.com/recipes/" +
       id +
       "/analyzedInstructions?apiKey=f7c1bb91a6834ff68b06205d141ba628",
-    type: "GET",
+    method: "GET",
     success: function (res) {
-      console.log(res);
+      var list = [];
+      console.log(res[0]['steps']);
+      for (var i = 0; i < res[0]['steps'].length; i++){
+        var step = res[0]['steps'][i]['step'];
+        console.log(step);
+        list.push(step);
+      }
+      console.log(list);
+      postInstructions(list);
     }
   });
 }
@@ -53,7 +79,7 @@ function getRecipe(q) {
     url:
       "https://api.spoonacular.com/recipes/search?apiKey=f7c1bb91a6834ff68b06205d141ba628&number=1&query=" +
       q,
-    type: "GET",
+    method: "GET",
     success: function (res) {
       removePrevSearch(document.getElementById("output"));
       for (var i = 0; i < res.results.length; i++) {
