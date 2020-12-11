@@ -29,20 +29,20 @@ function getInfo(id, obj) {
 }
 
 function postInstructions(list) {
-  $.ajax({
-    method: "POST",
-    url: "https://api.spoonacular.com/recipes/analyzeInstructions",
-    async: true,
-    crossDomain: true,
+  e.preventDefault(); // this stops whatever the browser wanted to do itself.
+  const form = $(e.target).serializeArray();
+  fetch('/api', {
+    method: 'POST',
     headers: {
-      "content-type": "application/x-www-form-urlencoded",
-      "apiKey": "f7c1bb91a6834ff68b06205d141ba628"
+      'Content-Type': 'application/json'
     },
-    data: {"instructions": list},
-    success: function (res) {
-      console.log(res);
-    }
+    body: JSON.stringify(form)
   })
+    .then((fromServer) => fromServer.json())
+    .then((jsonFromServer) => console.log(jsonFromServer))
+    .catch((err) => {
+      console.log(err);
+    });
 }
 
 function getInstructions(id, obj) {
