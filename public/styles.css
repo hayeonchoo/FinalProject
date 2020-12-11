@@ -145,7 +145,9 @@ ul.ulist {
 
 .card {
   width: auto;
-  border: 1px solid black;
+  border-style: solid;
+  border-color: #dee1dd;
+  background-color: white;
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -163,7 +165,7 @@ h2 {
   text-decoration: underline;
 }
 .bott {
-  border-style: groove;
+  border-style: solid;
   border-color: #dee1dd;
   background-color: white;
   width: 100%;
