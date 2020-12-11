@@ -122,7 +122,7 @@ function randRec() {
 
       var img = document.createElement("div");
       img.setAttribute("class", "img");
-      img.setAttribute("src",data.baseUri + data.recipes[0].image)
+      img.setAttribute("src",data.recipes[0].baseUri + data.recipes[0].image)
 
       var info = document.createElement("div");
       info.setAttribute("class","info");
