@@ -29,7 +29,7 @@ function getInfo(id, obj) {
 function postInstructions(list) {
   $.ajax({
     method: "POST",
-    url: "https://api.spoonacular.com/recipes/analyzeInstructions?apiKey=f7c1bb91a6834ff68b06205d141ba628",
+    url: "https://api.spoonacular.com/recipes/visualizeIngredients?apiKey=f7c1bb91a6834ff68b06205d141ba628",
     async: true,
     crossDomain: true,
     headers: {
