@@ -10,7 +10,7 @@ function getInfo(id, obj) {
       title.appendChild(document.createTextNode("Ingredients:"));
       obj.appendChild(title);
       var list = document.createElement("ul");
-      list.innerHTML += "Ingredients";
+      list.innerHTML += "<h2>Ingredients:</h2>";
       list.setAttribute("class","ulist");
       for (i in res.extendedIngredients) {
         var item = document.createElement("li");
