@@ -124,6 +124,7 @@ function randRec() {
       img.setAttribute("class", "img");
       var pic = document.createElement("img");
       pic.src = data.recipes[0].image;
+      pic.width = 300;
       img.appendChild(pic);
 
       var info = document.createElement("div");
