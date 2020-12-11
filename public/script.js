@@ -6,9 +6,6 @@ function getInfo(id, obj) {
       "/information?apiKey=f7c1bb91a6834ff68b06205d141ba628",
     method: "GET",
     success: function (res) {
-      var title = document.createElement("h2");
-      title.appendChild(document.createTextNode("Ingredients:"));
-      obj.appendChild(title);
       var list = document.createElement("ul");
       list.innerHTML += "<h2>Ingredients:</h2>";
       list.setAttribute("class","ulist");
@@ -25,6 +22,23 @@ function getInfo(id, obj) {
       sourceLink.title = "Link to Recipe";
       sourceLink.href = res.sourceUrl;
       obj.appendChild(sourceLink);
+    }
+  });
+}
+
+function postInstructions(list) {
+  $.ajax({
+    method: "POST",
+    url: "https://api.spoonacular.com/recipes/analyzeInstructions",
+    async: true,
+    crossDomain: true,
+    headers: {
+      "content-type": "application/x-www-form-urlencoded",
+      "Key": "f7c1bb91a6834ff68b06205d141ba628"
+    },
+    data: {"instructions": list},
+    success: function (res) {
+      console.log(res);
     }
   });
 }
