@@ -1,0 +1,11 @@
+async function databaseInitialize(dbSettings) {
+	try {
+		const db = await open(dbSettings);
+		console.log("Success");
+
+	}
+	catch(e) {
+		console.log("Error loading Database");
+
+	}
+}
