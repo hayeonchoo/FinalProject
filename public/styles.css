@@ -75,6 +75,18 @@ input {
   width: 960px;
   height: 400px;
 }
+
+.bg-img-faqs {
+  background-image: url(images/faqsheader.jpg);
+  min-height:380px;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  position:relative;
+  width: 960px;
+  height: 400px;
+}
+
 .topnav{
   display:flex;
   justify-content:space-between;
