@@ -125,13 +125,11 @@ function formRecipe(form) {
     method: "POST",
     url:
       "https://api.spoonacular.com/recipes/visualizeRecipe?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
-      async: true,
-      crossDomain: true,
-      contentType: false,
-      processData: false,
-      cache: false,
-      mimeType: "multipart/form-data",
-      data: form,
+    contentType: false,
+    processData: false,
+    contentType: 'multipart/form-data',
+    mimeType: 'multipart/form-data',
+    data: form,
     success: function (res) {
       console.log("before");
       console.log(res[0]);
