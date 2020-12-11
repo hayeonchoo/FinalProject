@@ -157,3 +157,8 @@ h2{font-family: 'Montserrat', sans-serif;
   text-decoration: underline;
 
 }
+.bott{
+  border-style: groove ;
+  border-color: #2f575D;
+  background-color: white;
+}
