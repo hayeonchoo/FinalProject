@@ -9,8 +9,6 @@ Project Link: https://glacial-spire-62201.herokuapp.com/
 ** TARGET BROWSERS **
 Our target browsers include desktops and iOS
 
-** Attribution **
-"Menu Icon made by Pixel perfect from www.flaticon.com"
 
 ** DEVELOPER MANUAL **
 How to install application and all dependencies:

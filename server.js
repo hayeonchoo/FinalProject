@@ -1,8 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-
-
+import {open} from 'sqlite';
+import sqlite3 from 'sqlite3';
 
 dotenv.config();
 
@@ -34,3 +34,11 @@ app.route('/api')
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
 });
+
+
+// SQLite Settings
+
+const dbSettings = {
+	filename: './tmp/database.db',
+	driver: sqlite3.Database
+	};
