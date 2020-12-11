@@ -29,8 +29,6 @@ function getInfo(id, obj) {
 }
 
 function postInstructions(list) {
-  e.preventDefault(); // this stops whatever the browser wanted to do itself.
-  const form = $(e.target).serializeArray();
   fetch('/api', {
     method: 'POST',
     headers: {
