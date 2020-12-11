@@ -3,7 +3,7 @@ function getInfo(id, obj) {
     url:
       "https://api.spoonacular.com/recipes/" +
       id +
-      "/information?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
+      "/information?apiKey=f7c1bb91a6834ff68b06205d141ba628",
     type: "GET",
     success: function (res) {
       var title = document.createElement("h2");
@@ -33,7 +33,7 @@ function getInstructions(id, obj) {
     url:
       "https://api.spoonacular.com/recipes/" +
       id +
-      "/analyzedInstructions?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
+      "/analyzedInstructions?apiKey=f7c1bb91a6834ff68b06205d141ba628",
     type: "GET",
     success: function (res) {
       var list = [];
@@ -57,7 +57,7 @@ function removePrevSearch(parent) {
 function getRecipe(q) {
   $.ajax({
     url:
-      "https://api.spoonacular.com/recipes/search?apiKey=0b5ee02fec15409fa6f231e40cda2fe6&number=1&query=" +
+      "https://api.spoonacular.com/recipes/search?apiKey=f7c1bb91a6834ff68b06205d141ba628&number=1&query=" +
       q,
     type: "GET",
     success: function (res) {
@@ -81,7 +81,3 @@ function getRecipe(q) {
     }
   });
 }
-
-<font size="6" color="#006400">
-<b>Formatting some text.</b>
-</font>
