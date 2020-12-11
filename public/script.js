@@ -9,7 +9,7 @@ function getInfo(id, obj) {
       var temp_list = [];
       var list = document.createElement("ul");
       list.innerHTML += "<h2>Ingredients:</h2>";
-      list.setAttribute("class","ulist");
+      list.setAttribute("class", "ulist");
       for (i in res.extendedIngredients) {
         var item = document.createElement("li");
         var entry = res.extendedIngredients[i]["name"];
@@ -17,16 +17,16 @@ function getInfo(id, obj) {
         item.appendChild(document.createTextNode(entry));
         list.appendChild(item);
       }
-      obj.appendChild(list);
-
-      postIngredients(temp_list);
-
       var sourceLink = document.createElement("a");
       var linkText = document.createTextNode("Link to Recipe");
       sourceLink.appendChild(linkText);
       sourceLink.title = "Link to Recipe";
       sourceLink.href = res.sourceUrl;
-      obj.appendChild(sourceLink);
+      list.appendChild(sourceLink);
+
+      obj.appendChild(list);
+
+      postIngredients(temp_list);
     }
   });
 }
@@ -34,7 +34,8 @@ function getInfo(id, obj) {
 function postIngredients(list) {
   $.ajax({
     method: "POST",
-    url: "https://api.spoonacular.com/recipes/visualizeIngredients?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
+    url:
+      "https://api.spoonacular.com/recipes/visualizeIngredients?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
     async: true,
     crossDomain: true,
     headers: {
@@ -47,7 +48,6 @@ function postIngredients(list) {
   });
 }
 
-
 function getInstructions(id, obj) {
   $.ajax({
     url:
@@ -57,9 +57,9 @@ function getInstructions(id, obj) {
     method: "GET",
     success: function (res) {
       var list = [];
-      console.log(res[0]['steps']);
-      for (var i = 0; i < res[0]['steps'].length; i++){
-        var step = res[0]['steps'][i]['step'];
+      console.log(res[0]["steps"]);
+      for (var i = 0; i < res[0]["steps"].length; i++) {
+        var step = res[0]["steps"][i]["step"];
         console.log(step);
         list.push(step);
       }
@@ -77,7 +77,7 @@ function removePrevSearch(parent) {
 function getRecipe(q) {
   $.ajax({
     url:
-      "https://api.spoonacular.com/recipes/search?apiKey=0b5ee02fec15409fa6f231e40cda2fe6&number=1&query=" +
+      "https://api.spoonacular.com/recipes/search?apiKey=0b5ee02fec15409fa6f231e40cda2fe6&number=2&query=" +
       q,
     method: "GET",
     success: function (res) {
@@ -85,15 +85,20 @@ function getRecipe(q) {
       for (var i = 0; i < res.results.length; i++) {
         var item = document.createElement("div");
         item.setAttribute("class", "card");
-        item.innerHTML =
+        var img = document.createElement("div");
+        img.setAttribute("class", "img");
+        img.innerHTML =
+          "<img src='" + res.baseUri + res.results[i].image + "'width='300'/>";
+        var info = document.createElement("div");
+        info.setAttribute("class", "info");
+        info.innerHTML +=
           "<h1>" +
-          res.results[i].title +
-          "</h1><br><img src='" +
-          res.baseUri +
-          res.results[i].image +
-          "'width='400' /><br>Cook Time: Ready In " +
+          res.results[i].title.toUpperCase() +
+          "</h1><br><p>Cook Time: Ready In " +
           res.results[i].readyInMinutes +
-          " Minutes";
+          " Minutes</p>";
+        item.appendChild(img);
+        item.appendChild(info);
         getInfo(res.results[i].id, item);
         getInstructions(res.results[i].id, item);
         document.getElementById("output").appendChild(item);
@@ -101,6 +106,7 @@ function getRecipe(q) {
     }
   });
 }
+
 /*
 function getInfo(id) {
   $.ajax({
