@@ -9,13 +9,16 @@ function getInfo(id, obj) {
       var title = document.createElement("h2");
       title.appendChild(document.createTextNode("Ingredients:"));
       obj.appendChild(title);
+      var list = document.createElement("ul");
+      list.setAttribute("class","ulist");
       for (i in res.extendedIngredients) {
         var item = document.createElement("li");
         var entry = res.extendedIngredients[i]["name"];
         console.log(entry);
         item.appendChild(document.createTextNode(entry));
-        obj.appendChild(item);
+        list.appendChild(item);
       }
+      obj.appendChild(list);
       var sourceLink = document.createElement("a");
       var linkText = document.createTextNode("Link to Recipe");
       sourceLink.appendChild(linkText);
