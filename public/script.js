@@ -75,3 +75,7 @@ function getRecipe(q) {
     }
   });
 }
+
+<font size="6" color="#006400">
+<b>Formatting some text.</b>
+</font>
