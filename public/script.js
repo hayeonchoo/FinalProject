@@ -14,7 +14,6 @@ function getInfo(id, obj) {
       for (i in res.extendedIngredients) {
         var item = document.createElement("li");
         var entry = res.extendedIngredients[i]["name"];
-        console.log(entry);
         item.appendChild(document.createTextNode(entry));
         list.appendChild(item);
       }
@@ -37,7 +36,8 @@ function getInstructions(id, obj) {
       "/analyzedInstructions?apiKey=f7c1bb91a6834ff68b06205d141ba628",
     type: "GET",
     success: function (res) {
-      console.log(res);
+      console.log(res[0]['steps']);
+
     }
   });
 }
