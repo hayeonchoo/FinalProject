@@ -79,7 +79,7 @@ function removePrevSearch(parent) {
 function getRecipe(q) {
   $.ajax({
     url:
-      "https://api.spoonacular.com/recipes/search?apiKey="+ apiKey +"&number=2&query=" +
+      "https://api.spoonacular.com/recipes/search?apiKey="+ apiKey +"&number=8&query=" +
       q,
     method: "GET",
     success: function (res) {
