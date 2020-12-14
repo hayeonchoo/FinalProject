@@ -1,6 +1,6 @@
 var apiKey = "10b97d23b79640198cf4d71905dec024";
 
-const sqlite = require('sqlite3').verbose();
+const sqlite = require('sqlite3');
 
 const DB_PATH = '/tmp/database.db';
 
