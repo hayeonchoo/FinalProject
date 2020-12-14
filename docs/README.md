@@ -16,4 +16,4 @@ How to run application on a server:
 How to run tests written for software:
 The API - all GET, POST, PUT, etc endpoints, and what they each do:
 Known bugs:
-Roadmap for future development: 
+Roadmap for future development: Work on creating a profile system for our stakeholders which will allow them to favorite recipes. 
