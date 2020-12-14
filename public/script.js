@@ -129,31 +129,30 @@ function randRec() {
   request.open('GET','https://api.spoonacular.com/recipes/random?apiKey=' + apiKey, true)
 
   request.onload = function() {
-    console.log(this.response)
     var data = JSON.parse(this.response)
-      var item = document.createElement('div')
-      item.setAttribute('class', 'card')
+    var item = document.createElement('div')
+    item.setAttribute('class', 'card')
 
-      var img = document.createElement("div");
-      img.setAttribute("class", "img");
-      var pic = document.createElement("img");
-      pic.src = data.recipes[0].image;
-      pic.width = 300;
-      img.appendChild(pic);
+    var img = document.createElement("div");
+    img.setAttribute("class", "img");
+    var pic = document.createElement("img");
+    pic.src = data.recipes[0].image;
+    pic.width = 300;
+    img.appendChild(pic);
 
-      var info = document.createElement("div");
-      info.setAttribute("class","info");
+    var info = document.createElement("div");
+    info.setAttribute("class","info");
 
-      var h1 = document.createElement('h1')
-      h1.textContent = data.recipes[0].title;
+    var h1 = document.createElement('h1')
+    h1.textContent = data.recipes[0].title;
 
-      
-      info.appendChild(h1);
-      item.appendChild(img);
-      item.appendChild(info);
+    
+    info.appendChild(h1);
+    item.appendChild(img);
+    item.appendChild(info);
 
-      getInfo(data.recipes[0].id, item);
-      document.getElementById('output').appendChild(item);
+    getInfo(data.recipes[0].id, item);
+    document.getElementById('output').appendChild(item);
   }
   request.send()
 }
