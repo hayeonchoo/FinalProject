@@ -4,7 +4,6 @@
   "description": "Repository for INST377 Dynamic Web Applications Fall 2020 at UMD",
   "main": "index.js",
   "type": "module",
- 
   "engines": {
     "node": "13.x"
   },
