@@ -1,5 +1,19 @@
 var apiKey = "10b97d23b79640198cf4d71905dec024";
 
+const sqlite = require('sqlite3').verbose();
+
+const DB_PATH = '/tmp/database.db';
+
+const DB = new sqlite3.Database(DB_PATH, function(err) {
+  if (err) {
+    console.log(err)
+    return
+  }
+  console.log('Connected to ' + DP_PATH + ' database.')
+});
+
+DB.close();
+
 function getInfo(id, obj) {
   $.ajax({
     url:
