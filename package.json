@@ -4,11 +4,7 @@
   "description": "Repository for INST377 Dynamic Web Applications Fall 2020 at UMD",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "test": "node --experimental-modules lab_utils/html_validation_error_gen.js",
-    "test2": "node --experimental-modules lab_utils/html_validation_error_gen.js && npx cypress open",
-    "start": "nodemon server.js"
-  },
+ 
   "engines": {
     "node": "13.x"
   },
