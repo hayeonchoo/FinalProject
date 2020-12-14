@@ -42,7 +42,7 @@ function getInfo(id, obj) {
 
       obj.appendChild(list);
 
-      postIngredients(temp_list);
+      //postIngredients(temp_list);
     }
   });
 }
@@ -93,7 +93,7 @@ function removePrevSearch(parent) {
 function getRecipe(q) {
   $.ajax({
     url:
-      "https://api.spoonacular.com/recipes/search?apiKey="+ apiKey +"&number=1&query=" +
+      "https://api.spoonacular.com/recipes/search?apiKey="+ apiKey +"&number=8&query=" +
       q,
     method: "GET",
     success: function (res) {
@@ -156,100 +156,3 @@ function randRec() {
   }
   request.send()
 }
-
-/*
-function getInfo(id) {
-  $.ajax({
-    url:
-      "https://api.spoonacular.com/recipes/" +
-      id +
-      "/information?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
-    method: "GET",
-    success: function (res) {
-      var temp_list = [];
-      for (i in res.extendedIngredients) {
-        var entry = res.extendedIngredients[i]["name"];
-        temp_list.push(entry);
-      }
-      return temp_list;
-    }
-  });
-}
-
-function formRecipe(form) {
-  $.ajax({
-    method: "POST",
-    url:
-      "https://api.spoonacular.com/recipes/visualizeRecipe?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
-    contentType: false,
-    processData: false,
-    headers: {
-      "Content-Type": "multipart/form-data"
-    },
-    mimeType: 'multipart/form-data',
-    data: {form},
-    success: function (res) {
-      console.log("before");
-      console.log(res[0]);
-      //document.getElementById("output").appendChild(res)
-      console.log("after");
-    }
-  });
-}
-
-function getInstructions(id, obj) {
-  $.ajax({
-    url:
-      "https://api.spoonacular.com/recipes/" +
-      id +
-      "/analyzedInstructions?apiKey=0b5ee02fec15409fa6f231e40cda2fe6",
-    method: "GET",
-    success: function (res) {
-      var list = [];
-      console.log(res[0]["steps"]);
-      for (var i = 0; i < res[0]["steps"].length; i++) {
-        var step = res[0]["steps"][i]["step"];
-        console.log(step);
-        list.push(step);
-      }
-      console.log(list);
-      return list;
-    }
-  });
-}
-
-function removePrevSearch(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
-}
-
-function getRecipe(q) {
-  $.ajax({
-    url:
-      "https://api.spoonacular.com/recipes/search?apiKey=0b5ee02fec15409fa6f231e40cda2fe6&number=1&query=" +
-      q,
-    method: "GET",
-    success: function (res) {
-      //removePrevSearch(document.getElementById("output"));
-      for (var i = 0; i < res.results.length; i++) {
-        var formData = new FormData();
-        formData.append("title", res.results[i].title);
-        formData.append("image", res.results[i].image);
-        formData.append("ingredients", getInfo(res.results[i].id));
-        formData.append("instructions", getInstructions(res.results[i].id));
-        formData.append("Cook Time", res.results[i].readyInMinutes);
-        formData.append("servings",res.results[i].servings);
-        formData.append("mask","ellipseMask");
-        formData.append("backgroundImage","background1");
-        formData.append("author",res.results[i].sourceName);
-        formData.append("backgroundColor","#ffffff");
-        formData.append("fontColor","#333333")
-        formData.append("source","spoonacular.com")
-
-        formRecipe(formData);
-      }
-    }
-  });
-}
-*/
